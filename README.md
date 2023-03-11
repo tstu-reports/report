@@ -3,8 +3,8 @@
 Для сборки на Arch Linux потребуется установить следующие зависимости:
 
 ```console
-sudo pacman -S texlive-most texlive-langcyrillic biber ghostscript python-pip git --needed
-pip install pygmentize
+$ sudo pacman -S texlive-most texlive-langcyrillic biber ghostscript python-pip git --needed
+$ pip install pygmentize
 ```
 
 Чтобы собрать отчёт:
