@@ -1,0 +1,13 @@
+report.log
+report.fls
+report.fdb_latexmk
+report.aux
+report.run.xml
+report.out
+report.blg
+report.bcf
+report.bbl
+report.pdf
+_minted-report
+report.toc
+compressed.pdf
