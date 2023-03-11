@@ -5,17 +5,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: sudo apt-get install -y python3-pygments && sudo pip3 install pygments
-      - run: sudo apt-get -y install ghostscript
-      - uses: yegor256/latexmk-action@0.7.1
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+      - name: Install deps!
+        run: sudo apt-get install -y python3-pygments ghostscript && sudo pip3 install pygments
+      - name: Compile
+        uses: yegor256/latexmk-action@0.7.1
         with:
           opts: -pdf
-          packages: acmart href-ul datetime fmtcount libertine paralist makecell footmisc currfile enumitem wrapfig lastpage biblatex titling svg trimspaces catchfile transparent textpos fvextra xstring framed environ totpages hyperxmp ifmtarg ncctools comment anyfontsize fdsymbol algpseudocodex algorithmicx stmaryrd preprint cyrillic cm-super babel-russian hyphen-russian lh to-be-determined cancel iexec docshots
-      - run: |
+          packages: libertine
+      - name: Prepare
+        run: |
           mkdir gh-pages
           cp main.pdf gh-pages
-      - uses: JamesIves/github-pages-deploy-action@v4.4.1
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
           folder: gh-pages
