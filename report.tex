@@ -12,12 +12,17 @@
 \usepackage{minted}
 % Figures
 \usepackage{graphicx}
+% \usepackage{svg}
 % Math
 % \usepackage{amsmath}
+% Algorithm
+% \usepackage{algorithm,algorithmicx,algpseudocode}
+% For long enviroments support page breaks
+\usepackage{caption}
 
 % Russian language and font
 \usepackage[T2A]{fontenc}
-\usepackage[russian]{babel}
+\usepackage[english,russian]{babel}
 \usepackage[mono=false]{libertine}
 \usepackage{hyphenat}
 \hyphenation{ма-те-ма-ти-ка вос-ста-нав-ли-вать}
@@ -38,6 +43,8 @@
   \section*{#1}
   \addcontentsline{toc}{section}{#1}
 }
+% Break page free listing enviroment 
+\newenvironment{code}{\captionsetup{type=listing}}{}
 
 \begin{document}
 \begin{titlepage}
@@ -99,11 +106,11 @@ duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt
 velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est
 culpa et culpa duis.
 
-\begin{listing}[H]
+\begin{code}
 	\inputminted[fontsize=\footnotesize]{python}{listings/matrix.py}
 	\caption{Some listing}
 	\label{lst:test}
-\end{listing}
+\end{code}
 
 \begin{figure}[H]
 	\begin{center}
@@ -113,6 +120,10 @@ culpa et culpa duis.
 	\label{fig:cat}
 \end{figure}
 
+\section{Глава с нумерацией}
+
+Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
+consectetur cupidatat.
 
 \asection{Заключение}
 
