@@ -5,19 +5,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Install deps!
+        
+      - name: Install pygments for minted
         run: sudo apt-get install -y python3-pygments && sudo pip3 install pygments
+        
       - name: Compile
         uses: yegor256/latexmk-action@0.8.0
         with:
           opts: -pdf
           packages: libertine
+          
       - name: Prepare
         run: |
           mkdir gh-pages
           cp report.pdf gh-pages
+          
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
