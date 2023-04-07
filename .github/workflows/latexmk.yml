@@ -17,14 +17,9 @@ jobs:
           cmd: make
           packages: libertine
           
-      - name: Prepare
-        run: |
-          mkdir gh-pages
-          cp report.pdf gh-pages
-          
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
-          folder: gh-pages
+          folder: package
           clean: false
