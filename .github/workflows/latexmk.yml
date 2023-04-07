@@ -10,7 +10,7 @@ jobs:
       - name: Compile
         uses: yegor256/latexmk-action@0.8.0
         with:
-          run: make
+          cmd: make
           packages: libertin          
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.1
