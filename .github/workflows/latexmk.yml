@@ -7,24 +7,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        
-      - name: Install pygments for minted
-        run: sudo apt-get install -y python3-pygments && sudo pip3 install pygments
-        
       - name: Compile
         uses: yegor256/latexmk-action@0.8.0
         with:
-          opts: -pdf
-          packages: libertine
-          
-      - name: Prepare
-        run: |
-          mkdir gh-pages
-          cp report.pdf gh-pages
-          
-      - name: Deploy 🚀
+          run: make
+          packages: libertin          
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
-          folder: gh-pages
+          folder: package
           clean: false
