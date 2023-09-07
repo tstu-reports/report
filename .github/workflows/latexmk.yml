@@ -11,7 +11,7 @@ jobs:
         uses: yegor256/latexmk-action@0.8.1
         with:
           cmd: make package
-          packages: libertine minted hyphenat cyrillic babel-russian hyphen-russian csquotes
+          packages: libertine minted hyphenat cyrillic babel-russian hyphen-russian csquotes biblatex
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
