@@ -3,7 +3,7 @@ all: report.pdf
 report.pdf: report.tex
 	latexmk -pdf
 
-package: report.tex
+package: report.pdf
 	mkdir package
 	cp report.pdf package
 
