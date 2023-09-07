@@ -11,7 +11,7 @@ jobs:
         uses: yegor256/latexmk-action@0.8.1
         with:
           cmd: make package
-          packages: libertine
+          packages: libertine minted
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
