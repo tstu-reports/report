@@ -1,4 +1,4 @@
-all: report.pdf package
+all: report.pdf
 
 report.pdf: report.tex
 	latexmk -pdf
@@ -9,4 +9,5 @@ package: report.tex
 
 clean:
 	latexmk -C
+
 .PHONY: clean

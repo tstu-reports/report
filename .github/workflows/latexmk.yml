@@ -10,10 +10,10 @@ jobs:
       - name: Compile
         uses: yegor256/latexmk-action@0.8.0
         with:
-          cmd: make
-          packages: libertin          
+          cmd: make package
+          packages: libertin
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           branch: gh-pages
           folder: package
