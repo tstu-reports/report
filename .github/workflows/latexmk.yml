@@ -1,4 +1,6 @@
-name: latexmk
+name: Build and Deploy
+permissions:
+  contents: write
 on:
   push:
 jobs:
