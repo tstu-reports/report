@@ -17,7 +17,7 @@
 % \usepackage{amsmath}
 % Algorithm
 % \usepackage{algorithm,algorithmicx,algpseudocode}
-% For long enviroments support page breaks
+% For long environments support page breaks
 \usepackage{caption}
 
 % Russian language and font
@@ -28,10 +28,10 @@
 \hyphenation{ма-те-ма-ти-ка вос-ста-нав-ли-вать}
 \usepackage{csquotes}
 \addto\captionsrussian{
-  \renewcommand{\figurename}{Рисунок}
-  \renewcommand{\partname}{Глава}
-  \renewcommand{\contentsname}{Содержание}
-  \renewcommand\listingscaption{Листинг}
+	\renewcommand{\figurename}{Рисунок}
+	\renewcommand{\partname}{Глава}
+	\renewcommand{\contentsname}{Содержание}
+	\renewcommand\listingscaption{Листинг}
 }
 
 % Bibliographies
@@ -40,10 +40,10 @@
 
 % Useful commands
 \newcommand{\asection}[1]{
-  \section*{#1}
-  \addcontentsline{toc}{section}{#1}
+	\section*{#1}
+	\addcontentsline{toc}{section}{#1}
 }
-% Break page free listing enviroment 
+% Break page free listing environment 
 \newenvironment{code}{\captionsetup{type=listing}}{}
 
 \begin{document}
@@ -68,7 +68,7 @@
 
 					Работу выполнил:\\
 					Малов А. В. \\
-					Группа: Б.ПИН-РИС-20.05\\
+					Группа: Б.ПИН-РИС-20.06\\
 
 					Проверил:\\
 					% старший преподаватель кафедры ПО
@@ -109,7 +109,6 @@ culpa et culpa duis.
 \begin{code}
 	\inputminted[fontsize=\footnotesize]{python}{listings/matrix.py}
 	\caption{Some listing}
-	\label{lst:test}
 \end{code}
 
 \begin{figure}[H]
@@ -117,7 +116,6 @@ culpa et culpa duis.
 		\includegraphics[width=0.95\textwidth]{figures/cat.jpg}
 	\end{center}
 	\caption{Some figure}
-	\label{fig:cat}
 \end{figure}
 
 \section{Глава с нумерацией}
@@ -143,3 +141,4 @@ culpa et culpa duis.
 \addcontentsline{toc}{section}{Список используемой литературы}
 
 \end{document}
+

@@ -11,3 +11,5 @@ report.pdf
 _minted-report
 report.toc
 compressed.pdf
+indent.log
+report.synctex.gz
