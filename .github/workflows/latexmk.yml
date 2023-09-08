@@ -8,7 +8,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Compile
-        run: make package
+        run: |
+          export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
+          make package
         shell: bash
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.4.3
